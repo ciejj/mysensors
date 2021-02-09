@@ -15,10 +15,13 @@
 #define MY_BAUD_RATE 115200
 #endif
 
+enum doorbellEnum {OFF, ON, WaitingForRellese};
+doorbellEnum doorbellState = OFF;
+
 // Remember to add library to Arduino path
 #include <MySensors.h>
-#include "./Mapping/Mapping.hpp"
-#include "./Automation/Automation.hpp"
+#include "./Mapping/Mapping_board_01.hpp"
+#include "./Automation/Automation_board_01.hpp"
 
 // TODO: as this should be fixed, refactor to keep index fixed
 // sensor[0] -> msgs[0]
@@ -43,11 +46,12 @@ void setup() {
     digitalWrite(sensor.pin, bState);
   }
   setupButtons();
+
 }
 
 void presentation() {
   // Send the sketch version information to the gateway and Controller
-  sendSketchInfo("Gateway", "1.5");
+  sendSketchInfo("Gateway", "1.7");
 
   // Send actual states
   for (uint8_t idx = 0; idx < maxSensors; idx++) {
@@ -55,22 +59,43 @@ void presentation() {
     present(sensor.id, S_BINARY, sensor.description);
     send(msgs[idx].set(loadState(sensor.id)));
   }
+
 }
 
 void loop() {
-  // Keep sensing buttons
-  saloon.tick();
-  gamingRoom.tick();
-  bedroom.tick();
-  bed1.tick();
-  bed2.tick();
-  guests.tick();
-  bathroom.tick();
-  mirror.tick();
-  kitchen.tick();
-  kitchenTable.tick();
-  workshop.tick();
-  corridor.tick();
+
+bathroom_down_mirror.tick();
+bathroom_down_b1.tick();
+bathroom_down_b2.tick();
+cloakroom_down.tick();
+vestibule_b1.tick();
+hall_down_stairs_b1.tick();
+hall_down_bathroom_b1.tick();
+hall_down_mirror_b1.tick();
+room_down_b1.tick();
+room_down_b2.tick();
+living_room_b1.tick();
+living_room_b2.tick();
+kitchen_b1.tick();
+kitchen_b2.tick();
+living_room_b3.tick();
+living_room_b4.tick();
+room_b_b1.tick();
+room_b_b2.tick();
+room_l_b1.tick();
+room_l_b2.tick();
+room_n_b1.tick();
+room_n_b2.tick();
+cloakroom_up.tick();
+laundry_b1.tick();
+bathroom_up_b1.tick();
+bathroom_up_b2.tick();
+bathroom_up_mirror.tick();
+office_b1.tick();
+hall_office_b1.tick();
+hall_up_scones_b1.tick();
+office_b2.tick();
+
 }
 
 void receive(const MyMessage &message) {
