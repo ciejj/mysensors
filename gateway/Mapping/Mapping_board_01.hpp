@@ -122,7 +122,7 @@ OneButton kitchen_b1(A12,true);
 OneButton kitchen_b2(A13,true);
 OneButton living_room_b3(A14,true);
 OneButton living_room_b4(A15,true);
-OneButton laundry_b1(53,true);
+OneButton laundry(53,true);
 OneButton bathroom_up_b1(52,true);
 OneButton bathroom_up_b2(51,true);
 OneButton bathroom_up_mirror(50,true);

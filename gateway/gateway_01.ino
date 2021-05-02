@@ -87,7 +87,7 @@ room_l_b2.tick();
 room_n_b1.tick();
 room_n_b2.tick();
 cloakroom_up.tick();
-laundry_b1.tick();
+laundry.tick();
 bathroom_up_b1.tick();
 bathroom_up_b2.tick();
 bathroom_up_mirror.tick();
