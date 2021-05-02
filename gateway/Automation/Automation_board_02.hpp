@@ -46,14 +46,15 @@ bar.attachClick(clickCallback, BAR_ID);
 pantry_small.attachClick(clickCallback, PANTRY_SMALL_ID);
 living_room_table.attachClick(clickCallback, LIVING_ROOM_TABLE_ID);
 pantry_big.attachClick(clickCallback, PANTRY_BIG_ID);
+
+garage_walls.attachClick(clickCallback, GARAGE_WALLS_ID);
 stairs_scones.attachClick(clickCallback,STAIRS_SCONES_ID);
-bedroom_b1.attachClick(clickCallback, BEDROOM_S1_ID);
-bedroom_b2.attachClick(clickCallback, BEDROOM_S2_ID);
-bedroom_bed_b1.attachClick(clickCallback, BEDROOM_BED_ID);
-bedroom_bed_b2.attachClick(clickCallback, BEDROOM_BED_ID);
+bedroom.attachClick(clickCallback, BEDROOM_ID);
+bedroom_bed.attachClick(clickCallback, BEDROOM_BED_ID);
 hall_up_b1.attachClick(clickCallback, HALL_UP_1_ID);
 hall_up_b2.attachClick(clickCallback, HALL_UP_2_ID);
-garage_walls.attachClick(clickCallback, GARAGE_WALLS_ID);
+dressing_table.attachClick(clickCallback, DRESSING_TABLE_ID)
+
 garage_outside_b1.attachClick(clickCallback, GARAGE_OUTSIDE_1_ID);
 garage_outside_b2.attachClick(clickCallback, GARAGE_OUTSIDE_2_ID);
 lights_outside_b1.attachClick(clickCallback, LIGHTS_OUTSIDE_1_ID);
