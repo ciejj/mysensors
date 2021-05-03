@@ -53,7 +53,7 @@ bedroom.attachClick(clickCallback, BEDROOM_ID);
 bedroom_bed.attachClick(clickCallback, BEDROOM_BED_ID);
 hall_up_b1.attachClick(clickCallback, HALL_UP_1_ID);
 hall_up_b2.attachClick(clickCallback, HALL_UP_2_ID);
-dressing_table.attachClick(clickCallback, DRESSING_TABLE_ID)
+dressing_table.attachClick(clickCallback, DRESSING_TABLE_ID);
 
 garage_outside_b1.attachClick(clickCallback, GARAGE_OUTSIDE_1_ID);
 garage_outside_b2.attachClick(clickCallback, GARAGE_OUTSIDE_2_ID);

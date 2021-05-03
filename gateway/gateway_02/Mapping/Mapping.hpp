@@ -33,7 +33,7 @@ const uint8_t BEDROOM_ID                 = 60;
 const uint8_t BEDROOM_BED_ID             = 61;
 const uint8_t HALL_UP_1_ID               = 62;
 const uint8_t HALL_UP_2_ID               = 63;
-const uint8_t DRESSING_TABLE             = 64;
+const uint8_t DRESSING_TABLE_ID          = 64;
 const uint8_t TO_BE_USED                 = 65;
 const uint8_t GARAGE_OUTSIDE_1_ID        = 66;
 const uint8_t GARAGE_OUTSIDE_2_ID        = 67;
@@ -71,8 +71,7 @@ SensorsStruct Sensors [] = {
 {LIGHTS_OUTSIDE_1_ID,     "zewnętrzne S1",        20, false},        
 {LIGHTS_OUTSIDE_2_ID,     "zewnętrzne S2",        21, false},        
 {HOUSE_OUTSIDE_ID,        "podbitka góra",        22, false},
-{ATTIC_ID,                "strych",               23, false},
-{,"sypialnia toaletka",   23, false},
+{ATTIC_ID,                "strych",               23, false}
 };
 const uint8_t maxSensors = sizeof(Sensors) / sizeof(SensorsStruct);
 MyMessage msgs[maxSensors+1]; //door is extra case

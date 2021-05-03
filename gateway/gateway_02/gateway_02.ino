@@ -20,8 +20,8 @@ doorbellEnum doorbellState = OFF;
 
 // Remember to add library to Arduino path
 #include <MySensors.h>
-#include "./Mapping/Mapping_board_02.hpp"
-#include "./Automation/Automation_board_02.hpp"
+#include "./Mapping/Mapping.hpp"
+#include "./Automation/Automation.hpp"
 
 // TODO: as this should be fixed, refactor to keep index fixed
 // sensor[0] -> msgs[0]
@@ -64,6 +64,7 @@ void presentation() {
 
 void loop() {
 
+boiler_room_bathtub.tick();
 garage_ceiling.tick();
 boiler_room.tick();
 garage_corridor.tick();
@@ -75,7 +76,7 @@ pantry_big.tick();
 garage_walls.tick();
 stairs_scones.tick();
 bedroom.tick();
-bedroom_bed_b1.tick();
+bedroom_bed.tick();
 hall_up_b1.tick();
 hall_up_b2.tick();
 dressing_table.tick();
